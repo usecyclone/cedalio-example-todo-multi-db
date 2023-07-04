@@ -140,7 +140,7 @@ export default function App() {
     }
 
     const response = await axios.post(
-      url, payload
+      url, payload, {headers: {"Content-Type": "text/plain"}}
     )
     return response.data.token
   }
